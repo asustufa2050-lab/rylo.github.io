@@ -1,289 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gazer | Cybersecurity Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
-
-body{
-background:#0b0f14;
-color:#e6edf3;
-line-height:1.7;
-}
-
-.container{
-width:90%;
-max-width:1000px;
-margin:auto;
-padding:70px 0;
-}
-html{
-scroll-behavior:smooth;
-}
-/* HEADER */
-header{
-margin-bottom:60px;
-}
-
-h1{
-font-size:38px;
-font-weight:700;
-letter-spacing:1px;
-}
-
-.role{
-color:#8b949e;
-margin-top:10px;
-font-size:15px;
-}
-
-nav{
-margin-top:25px;
-}
-
-nav a{
-color:#8b949e;
-text-decoration:none;
-margin-right:25px;
-font-size:14px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#58a6ff;
-}
-
-/* SECTION */
-section{
-margin-bottom:70px;
-opacity:0;
-transform:translateY(20px);
-animation:fadeIn 0.8s forwards;
-}
-
-section:nth-child(2){animation-delay:.1s;}
-section:nth-child(3){animation-delay:.2s;}
-section:nth-child(4){animation-delay:.3s;}
-section:nth-child(5){animation-delay:.4s;}
-
-@keyframes fadeIn{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-h2{
-font-size:20px;
-margin-bottom:20px;
-color:#58a6ff;
-}
-
-.card{
-background:#11161c;
-padding:25px;
-border-radius:8px;
-border:1px solid #1f2933;
-margin-bottom:20px;
-transition:.3s;
-}
-
-.card:hover{
-border-color:#58a6ff;
-}
-
-.skills span{
-display:inline-block;
-background:#161b22;
-padding:7px 14px;
-border-radius:20px;
-margin:5px 8px 5px 0;
-font-size:13px;
-border:1px solid #1f2933;
-}
-
-.button{
-display:inline-block;
-margin-top:15px;
-padding:10px 18px;
-background:#58a6ff;
-color:#0b0f14;
-text-decoration:none;
-border-radius:5px;
-font-weight:600;
-font-size:14px;
-transition:.3s;
-}
-
-.button:hover{
-background:#3b82f6;
-}
-
-footer{
-border-top:1px solid #1f2933;
-padding-top:25px;
-color:#6e7681;
-font-size:14px;
-}
-.hero{
-height:350px;
-background: linear-gradient(-45deg, #0b0f14, #111827, #0f172a, #0b0f14);
-background-size: 400% 400%;
-animation: gradientMove 12s ease infinite;
-position:relative;
-display:flex;
-align-items:center;
-}
-
-/* Smooth moving animation */
-@keyframes gradientMove{
-0%{
-background-position: 0% 50%;
-}
-50%{
-background-position: 100% 50%;
-}
-100%{
-background-position: 0% 50%;
-}
-}
-
-
-
-.overlay{
-background:rgba(11,15,20,0.75);
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding-left:5%;
-}
-
-.hero h1{
-font-size:40px;
-position:relative;
-z-index:1;
-}
-
-/* Soft blue glow */
-.hero h1::after{
-content:"";
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-width:260px;
-height:260px;
-background:radial-gradient(circle, rgba(88,166,255,0.15) 0%, transparent 70%);
-z-index:-1;
-filter:blur(40px);
-}
-
-.hero .role{
-margin-top:10px;
-color:#c9d1d9;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-h1{
-font-size:28px;
-}
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Tufason — cybersecurity learner exploring network security, ethical hacking, and web development.">
+  <title>Rylo — Cybersecurity & Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b12;--panel:#0e1420;--panel2:#111a29;--line:#202c3d;--text:#e8eef8;--muted:#8d9bb0;--green:#9bffb5;--cyan:#72e5ff;--mono:"DM Mono",monospace;--sans:"Space Grotesk",sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(114,229,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(114,229,255,.06) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-2}
+    a{color:inherit;text-decoration:none}
+    .glow{position:absolute;width:420px;height:420px;right:-120px;top:0;background:radial-gradient(circle,rgba(114,229,255,.12),transparent 68%);pointer-events:none;z-index:-1}
+    .wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(32,44,61,.8)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:700;font-size:20px;letter-spacing:-.8px}.brand span{color:var(--green)}
+    .navlinks{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:13px}
+    .navlinks a:hover{color:var(--green)}
+    .nav-cta{border:1px solid var(--line);border-radius:8px;padding:9px 13px;color:var(--text)!important}
+    .hero{min-height:610px;display:grid;grid-template-columns:1.3fr .7fr;gap:45px;align-items:center;padding:90px 0 80px;position:relative}
+    .eyebrow{font-family:var(--mono);color:var(--green);font-size:12px;letter-spacing:1.4px;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:23px}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.04;letter-spacing:-3px;margin-bottom:22px}
+    h1 .accent{color:var(--green)}
+    .lead{font-size:17px;color:var(--muted);max-width:580px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:8px;font-weight:600;font-size:13px;border:1px solid var(--line);transition:transform .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px);border-color:var(--green)}
+    .btn.primary{background:var(--green);color:#07100b;border-color:var(--green)}
+    .mini-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-family:var(--mono);font-size:11px}
+    .mini-meta span:before{content:"↳ ";color:var(--green)}
+    .terminal{background:rgba(14,20,32,.9);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.25);transform:rotate(1deg)}
+    .terminal-head{height:42px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 15px;color:var(--muted);font:11px var(--mono)}
+    .orb{width:7px;height:7px;border-radius:50%;background:#334256}.terminal-head span:last-child{margin-left:auto}
+    .terminal-body{padding:23px 20px 25px;font:12px/2 var(--mono);color:var(--muted)}
+    .prompt{color:var(--green)}.command{color:var(--text)}.out{color:var(--cyan)}.terminal-line{white-space:normal}
+    section{padding:64px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
+    .kicker{font:11px var(--mono);color:var(--green);letter-spacing:1.5px;text-transform:uppercase}
+    h2{font-size:clamp(28px,4vw,38px);letter-spacing:-1.4px;margin-top:6px}
+    .section-note{color:var(--muted);font-size:13px;max-width:370px}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .panel{background:linear-gradient(145deg,rgba(17,26,41,.92),rgba(12,17,27,.92));border:1px solid var(--line);border-radius:13px;padding:25px}
+    .panel p{color:var(--muted);font-size:14px}
+    .panel p+p{margin-top:13px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .stat{padding:17px;border:1px solid var(--line);border-radius:10px;background:rgba(8,11,18,.55)}
+    .stat strong{display:block;color:var(--green);font:20px var(--mono);margin-bottom:5px}.stat span{font-size:12px;color:var(--muted)}
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .skill{border:1px solid var(--line);border-radius:10px;padding:18px;background:var(--panel);transition:.2s}
+    .skill:hover{border-color:rgba(155,255,181,.6);transform:translateY(-3px)}
+    .skill .icon{font:18px var(--mono);color:var(--green);margin-bottom:12px}
+    .skill h3{font-size:14px;margin-bottom:5px}.skill p{font-size:12px;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+    .project{padding:24px;position:relative;overflow:hidden}
+    .project:after{content:"";position:absolute;width:150px;height:150px;right:-80px;top:-80px;border-radius:50%;background:rgba(114,229,255,.07)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .project-tag{font:10px var(--mono);letter-spacing:.8px;color:var(--green);border:1px solid rgba(155,255,181,.25);padding:5px 8px;border-radius:5px}
+    .project h3{font-size:20px;margin-bottom:9px}.project p{font-size:13px;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}
+    .tags span{font:10px var(--mono);color:#a9b8cb;background:#101b2a;padding:5px 7px;border-radius:5px}
+    .project-foot{margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .project-foot strong{color:var(--cyan);font-weight:500}
+    .learning{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .learning .panel{padding:21px}.step{font:11px var(--mono);color:var(--green);margin-bottom:12px}
+    .learning h3{font-size:16px;margin-bottom:7px}.learning p{font-size:12px}
+    .contact{display:flex;justify-content:space-between;align-items:center;gap:25px;background:linear-gradient(110deg,rgba(155,255,181,.09),rgba(114,229,255,.04));border:1px solid var(--line);border-radius:15px;padding:30px}
+    .contact h2{font-size:30px}.contact p{color:var(--muted);font-size:13px;margin-top:7px}
+    footer{padding:30px 0 38px;border-top:1px solid var(--line);color:var(--muted);font:11px var(--mono)}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:35px;padding:70px 0 45px;min-height:auto}.terminal{max-width:520px}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.learning{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:not(.nav-cta){display:none}.section-head{align-items:start;flex-direction:column}.contact{align-items:start;flex-direction:column}}
+    @media(max-width:480px){.wrap{width:min(100% - 28px,1080px)}.nav{height:64px}.hero h1{letter-spacing:-2px}.projects{grid-template-columns:1fr}.panel{padding:20px}.skills{gap:9px}.skill{padding:14px}.mini-meta{gap:12px}.contact{padding:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-
-<header class="hero">
-  <div class="overlay">
-    <h1>Gazer</h1>
-    <p class="role">Cybersecurity Enthusiast | Network Security | Ethical Hacking</p>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+  <div class="glow"></div>
+  <div class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">RYLO<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#learning">Learning</a>
+        <a class="nav-cta" href="#contact">Get in touch ↗</a>
+      </div>
     </nav>
   </div>
-</header>
 
+  <main class="wrap">
+    <header class="hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Portfolio / 2026</div>
+        <h1>Curious mind.<br><span class="accent">Security first.</span></h1>
+        <p class="lead">Hey, I'm Tufason — a cybersecurity enthusiast and developer building practical skills in network security, Linux, and ethical hacking.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore my work <span>↘</span></a>
+          <a class="btn" href="https://github.com/asustufa2050-lab" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/lalremruata-jahau-123914383/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <div class="mini-meta"><span>Hands-on learning</span><span>Security labs</span><span>Always building</span></div>
+      </div>
+      <aside class="terminal" aria-label="Decorative terminal">
+        <div class="terminal-head"><i class="orb"></i><i class="orb"></i><i class="orb"></i><span>rylo@lab:~</span></div>
+        <div class="terminal-body">
+          <div class="terminal-line"><span class="prompt">rylo@lab</span>:~$ <span class="command">whoami</span></div>
+          <div class="terminal-line out">cybersecurity-learner</div>
+          <br>
+          <div class="terminal-line"><span class="prompt">rylo@lab</span>:~$ <span class="command">cat focus.txt</span></div>
+          <div class="terminal-line out">network security</div>
+          <div class="terminal-line out">linux & ethical hacking</div>
+          <div class="terminal-line out">web development</div>
+          <br>
+          <div class="terminal-line"><span class="prompt">rylo@lab</span>:~$ <span class="command">echo $STATUS</span></div>
+          <div class="terminal-line out">learning_and_building<span class="prompt"> ▍</span></div>
+        </div>
+      </aside>
+    </header>
 
-<section id="about">
-<h2>About</h2>
-<div class="card">
-<p>
-Cybersecurity enthusiast with hands-on experience in penetration testing labs and vulnerability assessment. 
-Comfortable working with Linux environments and security tools to identify and analyze potential risks.
-Focused on building practical security skills and preparing for professional security roles.
-</p>
-</div>
-</section>
+    <section id="about" class="reveal">
+      <div class="section-head"><div><div class="kicker">01 / About</div><h2>A little about me</h2></div><p class="section-note">Learning by doing, documenting what I discover, and turning curiosity into practical skills.</p></div>
+      <div class="about-grid">
+        <div class="panel">
+          <p>I'm building my foundation in cybersecurity through hands-on labs, networking practice, and Linux-based tools. I enjoy understanding how systems communicate, how vulnerabilities happen, and how they can be prevented.</p>
+          <p>My current focus is to keep learning responsibly, document my experiments, and grow my development skills alongside security.</p>
+        </div>
+        <div class="panel stats">
+          <div class="stat"><strong>01</strong><span>Learn the fundamentals</span></div>
+          <div class="stat"><strong>02</strong><span>Practice in safe labs</span></div>
+          <div class="stat"><strong>03</strong><span>Document findings</span></div>
+          <div class="stat"><strong>04</strong><span>Build consistently</span></div>
+        </div>
+      </div>
+    </section>
 
-<section id="skills">
-<h2>Technical Skills</h2>
-<div class="card skills">
-<span>Penetration Testing</span>
-<span>Network Scanning (Nmap)</span>
-<span>Kali Linux</span>
-<span>Wireshark</span>
-<span>Metasploit</span>
-<span>Linux Administration</span>
-<span>Web Application Security</span>
-<span>CTF Challenges</span>
-</div>
-</section>
+    <section id="skills" class="reveal">
+      <div class="section-head"><div><div class="kicker">02 / Toolkit</div><h2>Skills I'm developing</h2></div><p class="section-note">A learning-focused toolkit. Add or remove technologies as your experience grows.</p></div>
+      <div class="skills">
+        <article class="skill"><div class="icon">⌘</div><h3>Linux & Kali</h3><p>Command line, system basics, lab setup</p></article>
+        <article class="skill"><div class="icon">⌁</div><h3>Networking</h3><p>TCP/IP, DNS, routing, packet analysis</p></article>
+        <article class="skill"><div class="icon">⌕</div><h3>Wireshark</h3><p>Inspecting traffic in authorized labs</p></article>
+        <article class="skill"><div class="icon">↗</div><h3>Nmap</h3><p>Service discovery and enumeration in labs</p></article>
+        <article class="skill"><div class="icon">{ }</div><h3>Web basics</h3><p>HTML, CSS, JavaScript fundamentals</p></article>
+        <article class="skill"><div class="icon">$_</div><h3>Terminal</h3><p>Shell commands and troubleshooting</p></article>
+        <article class="skill"><div class="icon">◇</div><h3>Security concepts</h3><p>Threats, vulnerabilities, and mitigation</p></article>
+        <article class="skill"><div class="icon">⌂</div><h3>CTF & labs</h3><p>Structured practice and note-taking</p></article>
+      </div>
+    </section>
 
-<section id="projects">
-<h2>Projects</h2>
+    <section id="projects" class="reveal">
+      <div class="section-head"><div><div class="kicker">03 / Selected work</div><h2>Projects & practice</h2></div><p class="section-note">Portfolio entries based on your current learning areas. Replace the descriptions with verified results as each project is completed.</p></div>
+      <div class="projects">
+        <article class="panel project">
+          <div class="project-top"><span class="project-tag">NETWORKING</span><span>↗</span></div>
+          <h3>Network Traffic Analysis</h3>
+          <p>Practice reading packet captures to understand DNS lookups, protocols, endpoints, and normal network behavior.</p>
+          <div class="tags"><span>Wireshark</span><span>DNS</span><span>TCP/IP</span></div>
+          <div class="project-foot"><strong>Focus:</strong> packet inspection in a controlled environment</div>
+        </article>
+        <article class="panel project">
+          <div class="project-top"><span class="project-tag">SECURITY LAB</span><span>↗</span></div>
+          <h3>Vulnerability Assessment Lab</h3>
+          <p>Explore service discovery and basic enumeration on intentionally vulnerable lab machines, then document observations and mitigations.</p>
+          <div class="tags"><span>Nmap</span><span>Kali Linux</span><span>Linux</span></div>
+          <div class="project-foot"><strong>Focus:</strong> authorized lab testing and reporting</div>
+        </article>
+        <article class="panel project">
+          <div class="project-top"><span class="project-tag">LEARNING</span><span>↗</span></div>
+          <h3>TryHackMe Learning Notes</h3>
+          <p>Hands-on cybersecurity practice through guided rooms, challenges, and notes on the concepts and tools learned.</p>
+          <div class="tags"><span>CTF</span><span>Linux</span><span>Security fundamentals</span></div>
+          <div class="project-foot"><a href="https://tryhackme.com/p/Rylo321" target="_blank" rel="noreferrer"><strong>View TryHackMe profile ↗</strong></a></div>
+        </article>
+        <article class="panel project">
+          <div class="project-top"><span class="project-tag">WEB</span><span>↗</span></div>
+          <h3>Rylo Portfolio</h3>
+          <p>A responsive personal website built to share learning progress, practical projects, and development work in one place.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
+          <div class="project-foot"><strong>Focus:</strong> responsive UI and clear project documentation</div>
+        </article>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Vulnerability Assessment Lab</h3>
-<p>
-Performed reconnaissance and service enumeration using Nmap on lab machines.
-Analyzed open ports, services, and potential misconfigurations.
-</p>
-</div>
+    <section id="learning" class="reveal">
+      <div class="section-head"><div><div class="kicker">04 / Roadmap</div><h2>What I'm working toward</h2></div></div>
+      <div class="learning">
+        <article class="panel"><div class="step">STEP_01</div><h3>Strengthen fundamentals</h3><p>Get confident with networking, Linux, HTTP, DNS, and core security concepts.</p></article>
+        <article class="panel"><div class="step">STEP_02</div><h3>Practice with purpose</h3><p>Use legal training labs, write down findings, and learn the defensive side of each technique.</p></article>
+        <article class="panel"><div class="step">STEP_03</div><h3>Publish real projects</h3><p>Share source code, screenshots, clear READMEs, and lessons learned as projects become complete.</p></article>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Phishing Awareness Simulation</h3>
-<p>
-Configured and tested phishing simulations in a controlled environment to understand social engineering attack vectors.
-</p>
-</div>
+    <section id="contact" class="reveal">
+      <div class="contact">
+        <div><div class="kicker">05 / Contact</div><h2>Let's connect.</h2><p>Interested in security, development, or learning together? Connect with me on GitHub, LinkedIn, or TryHackMe.</p></div>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn primary" href="https://github.com/asustufa2050-lab" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/lalremruata-jahau-123914383/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://tryhackme.com/p/Rylo321" target="_blank" rel="noreferrer">TryHackMe ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: your@email.com</p>
-<p>GitHub: github.com/yourusername</p>
-<a href="#" class="button">Download Resume</a>
-</div>
-</section>
-
-<footer>
-© 2026 Tufason | Cybersecurity Portfolio
-</footer>
-
-</div>
-
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Tufason / RYLO</span><span>Built with curiosity & a security-first mindset.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  </script>
 </body>
 </html>
